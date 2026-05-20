@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PIA: Respiratory System & Robotics | Team 1</title>
+    <style>
+        :root {
+            --primary: #00d2ff;
+            --secondary: #0066ff;
+            --accent: #00ff87;
+            --dark-bg: #0f111a;
+            --card-bg: #1a1d29;
+            --text: #ffffff;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--dark-bg);
+            color: var(--text);
+            margin: 0;
+            padding: 0;
+            scroll-behavior: smooth;
+        }
+
+        /* Main Header */
+        header {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            padding: 40px 20px;
+            text-align: center;
+            border-bottom: 4px solid var(--primary);
+        }
+
+        header h1 {
+            font-size: 3.5rem;
+            margin: 0;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #ffffff;
+            text-shadow: 0px 4px 10px rgba(0, 210, 255, 0.5);
+        }
+
+        header p {
+            font-size: 1.3rem;
+            color: var(--primary);
+            margin: 10px 0 0 0;
+            font-weight: bold;
+        }
+
+        /* Navigation Menu */
+        nav {
+            background-color: #161925;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+            border-bottom: 1px solid #2a2f45;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            padding: 15px;
+            flex-wrap: wrap;
+        }
+
+        .nav-container a {
+            color: var(--text);
+            text-decoration: none;
+            padding: 10px 15px;
+            background-color: #222738;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            border: 1px solid #343b54;
+            font-size: 0.95rem;
+        }
+
+        .nav-container a:hover {
+            background-color: var(--primary);
+            color: #000;
+            transform: translateY(-2px);
+        }
+
+        /* Section Container */
+        .container {
+            max-width: 950px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        section {
+            background-color: var(--card-bg);
+            padding: 40px;
+            margin-bottom: 50px;
+            border-radius: 12px;
+            border-left: 5px solid var(--secondary);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+
+        section h2 {
+            color: var(--primary);
+            font-size: 2rem;
+            margin-top: 0;
+            border-bottom: 1px solid #2a2f45;
+            padding-bottom: 10px;
+        }
+
+        p {
+            line-height: 1.7;
+            font-size: 1.1rem;
+            color: #cdced4;
+        }
+
+        /* Medical Images Style */
+        .anatomia-img {
+            width: 100%;
+            max-width: 550px;
+            height: auto;
+            display: block;
+            margin: 25px auto;
+            border-radius: 8px;
+            border: 3px solid #343b54;
+            background-color: #000;
+        }
+
+        /* Grids and Cards */
+        .grid-box {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .card-item {
+            background: #222738;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid #343b54;
+        }
+
+        .card-item h3 {
+            margin-top: 0;
+            color: var(--primary);
+        }
+
+        .card-item.enfermedad h3 {
+            color: #ff4a4a;
+        }
+
+        /* Team Grid */
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .team-member {
+            background: linear-gradient(145deg, #1e2235, #161925);
+            padding: 15px;
+            border-radius: 8px;
+            border: 1px solid #343b54;
+            font-weight: bold;
+            font-size: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .team-member::before {
+            content: "👤";
+        }
+
+        footer {
+            background-color: #090a10;
+            padding: 30px;
+            text-align: center;
+            font-size: 0.9rem;
+            color: #676977;
+            border-top: 1px solid #1a1d29;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>PIA</h1>
+        <p>The Respiratory System and Robotics | Team 1</p>
+    </header>
+
+    <nav>
+        <div class="nav-container">
+            <a href="#equipo">Members</a>
+            <a href="#introduccion">Introduction</a>
+            <a href="#organos">Anatomical Structure</a>
+            <a href="#enfermedades">Diseases</a>
+            <a href="#robotica">How robotics helps</a>
+        </div>
+    </nav>
+
+    <div class="container">
+
+        <section id="equipo" style="border-left-color: var(--accent);">
+            <h2>Team 1 Members</h2>
+            <div class="team-grid">
+                <div class="team-member">Roberto Escobedo</div>
+                <div class="team-member">Katia Miranda</div>
+                <div class="team-member">Renata Pérez</div>
+                <div class="team-member">Eduardo Prax</div>
+                <div class="team-member">Leo Navarro</div>
+            </div>
+        </section>
+
+        <section id="introduccion">
+            <h2>Introduction to the Respiratory System</h2>
+            <p>The respiratory system is the group of organs responsible for carrying out the exchange of gases (oxygen and carbon dioxide) between the environment and the blood. This process is essential for cellular life and the proper functioning of all other systems in the human body.</p>
+            
+            <img class="anatomia-img" src="https://images.unsplash.com/photo-1559757175-5700dde675bc?auto=format&fit=crop&w=600&q=80" alt="Medical Diagram of the Respiratory System">
+        </section>
+
+        <section id="organos">
+            <h2>Complete Anatomical Structure</h2>
+            <p>The respiratory apparatus is composed of upper and lower respiratory tracts working together:</p>
+            <div class="grid-box">
+                <div class="card-item">
+                    <h3>1. Nasal Cavities</h3>
+                    <p>They are the main entrance. They filter dust, moisten the air, and warm it up using the nasal mucosa.</p>
+                </div>
+                <div class="card-item">
+                    <h3>2. Pharynx</h3>
+                    <p>A muscular tube that connects the nose to the larynx. It serves as a pathway for both air and food.</p>
+                </div>
+                <div class="card-item">
+                    <h3>3. Larynx</h3>
+                    <p>It contains the vocal cords that allow us to speak and features a flap called the epiglottis to keep food from entering the lungs.</p>
+                </div>
+                <div class="card-item">
+                    <h3>4. Trachea</h3>
+                    <p>A strong and flexible cartilaginous tube that guides clean air directly into the chest area.</p>
+                </div>
+                <div class="card-item">
+                    <h3>5. Bronchi</h3>
+                    <p>The trachea divides into two main branches (bronchi) that enter each lung, splitting into smaller and smaller airways.</p>
+                </div>
+                <div class="card-item">
+                    <h3>6. Lungs and Alveoli</h3>
+                    <p>The main spongy organs. Inside them, the alveoli (tiny air sacs) perform the rapid exchange of oxygen into the bloodstream.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="enfermedades">
+            <h2>Diseases of the Respiratory System</h2>
+            <p>There are several pathologies that can obstruct or damage the airways, making cellular oxygenation difficult:</p>
+            
+            <div class="grid-box">
+                <div class="card-item enfermedad">
+                    <h3>Chronic Asthma</h3>
+                    <p>Causes the airways to swell and narrow, leading to wheezing, shortness of breath, and coughing.</p>
+                </div>
+                <div class="card-item enfermedad">
+                    <h3>Lung Cancer</h3>
+                    <p>The development of malignant tumors that destroy healthy lung tissue, frequently caused by smoking or environmental pollutants.</p>
+                </div>
+                <div class="card-item enfermedad">
+                    <h3>COPD</h3>
+                    <p>Chronic Obstructive Pulmonary Disease. It causes a persistent blockage of airflow, severely damaging the alveoli.</p>
+                </div>
+            </div>
+
+            <img class="anatomia-img" src="https://images.unsplash.com/photo-1576086213369-97a306d36557?auto=format&fit=crop&w=600&q=80" alt="Doctor reviewing lungs">
+        </section>
+
+        <section id="robotica" style="border-left-color: var(--accent);">
+            <h2>How robotics helps</h2>
+            <p>Robotic technology directly helps fight and correct respiratory diseases by offering a level of accuracy that the human eye and hand cannot achieve alone. Specifically, robotics plays a key role by helping to perform ultra-precise internal surgeries in the lungs to remove tumors without damaging the surrounding healthy tissue, which shortens patient recovery times. It also helps by acting intelligently through automated systems capable of regulating the exact amount of oxygen a patient needs in intensive care, and it even assists through the design of programmed microdevices that travel through the airways to clear obstructions caused by asthma or mucus directly.</p>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>© 2026 - PIA Evidence Group 215 | Robotics and Biology</p>
+    </footer>
+
+</body>
+</html>
